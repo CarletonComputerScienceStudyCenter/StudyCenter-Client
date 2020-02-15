@@ -8,6 +8,8 @@
     "@testing-library/user-event": "^7.1.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-mathjax": "^1.0.1",
+    "react-mathjax-preview": "^0.1.16",
     "react-scripts": "3.4.0"
   },
   "scripts": {

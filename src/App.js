@@ -1,23 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import MathJax from 'react-mathjax-preview'
+
+const math = String.raw`
+Consider bitstrings of length 9. The positions in these strings are numbered as $1, 2, 3, ..., 9$. How many such bitstrings have the property that
+<ul>
+    <li>the bit at each even position is 0, or</li>
+    <li>the bitstring starts with 1010?</li>
+    </ul>
+
+<ol type="a">
+		<li>$54$</li>
+		<li>$56$</li>
+        <li>$58$</li>
+        <li>$60$</li>
+	  </ol>`;
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       <MathJax math={math} />
       </header>
     </div>
   );
