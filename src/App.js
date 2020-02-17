@@ -1,12 +1,12 @@
   
 import React, { useEffect, useState } from 'react';
-import './App.css';
+import './style/App.scss';
 import MathJax from 'react-mathjax-preview'
 import { ApolloProvider } from 'react-apollo'
 import { ApolloClient } from 'apollo-client'
 import { createHttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
-import { gql } from "apollo-boost";
+import { test } from './Queries'
 
 
 
@@ -14,16 +14,6 @@ function App() {
 
 let [math,setMath] = useState([])
 let [loading, setLoading] = useState(true);
-
-const test = gql`
-{
-  testField{
-    id
-    title
-    question
-  }
-}
-`;
 
 
 const httpLink = createHttpLink({
