@@ -10,7 +10,7 @@ import { test } from './Queries'
 
 function Quiz() {
 
-let [math,setMath] = useState([])
+let [questions,setQuestions] = useState([])
 let [loading, setLoading] = useState(true);
 
 
@@ -33,7 +33,8 @@ const queryData = async () =>{
       });
 
 
-    setMath(data.data);
+    setQuestions(data.data.questions);
+    console.log(data.data.questions)
     setLoading(false);
 }
 
@@ -41,10 +42,19 @@ const queryData = async () =>{
       <div className="quiz">
         {loading ? "loading..." :
         
-        math.testField.map( item => (
+        questions.map( item => (
           <>
-          <hr></hr>
           <MathJax math={item.question} />
+          <br></br>
+            <div className="question-answers">
+            { item.answers.map( answer => (
+              <div className="question-answer">
+                <input type="radio" name={item.id} value={answer.answer}></input>
+                <label>{answer.answer}</label><br></br>
+              </div>
+            ))
+            }
+            </div>
           </>
         ))
        

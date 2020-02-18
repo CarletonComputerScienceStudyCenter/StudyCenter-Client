@@ -1,10 +1,18 @@
 import { gql } from "apollo-boost";
 export const test = gql`
 {
-  testField{
+  questions{
     id
-    title
     question
+    hasMathjax
+    correctAnswer{
+      id
+      answer
+    }
+    answers{
+      id
+      answer
+    }
   }
 }
 `;
