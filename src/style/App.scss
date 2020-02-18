@@ -38,20 +38,12 @@
     }
   }
   */
-body{
-    width:100%;
-}
   .app{
       width:100%;
       display:flex;
       justify-content: center;
   }
 
-@media only screen and (min-width: 500px) {
-    .App-header{
-        margin:auto;
-        width: 70%;
-    }
-}
+
 
 
