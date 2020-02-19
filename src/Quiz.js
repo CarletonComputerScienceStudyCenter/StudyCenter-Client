@@ -46,12 +46,17 @@ const queryData = async () =>{
           <>
           <MathJax math={item.question} />
           <br></br>
-            <div className="question-answers">
+            <div className="question-buttons">
             { item.answers.map( answer => (
+             <div className="question-button">
+                <MathJax math={answer.answer} />
+             </div> ////question-answers
+             /*
               <div className="question-answer">
                 <input type="radio" name={item.id} value={answer.answer}></input>
                 <label>{answer.answer}</label><br></br>
               </div>
+              */
             ))
             }
             </div>
