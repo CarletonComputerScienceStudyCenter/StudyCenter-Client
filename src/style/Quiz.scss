@@ -44,7 +44,7 @@
   background-color: white;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.2s;
-  box-shadow: 0 0 6px rgba(33,33,33,.2); 
+  box-shadow: 0 0 4px rgba(33,33,33,.2); 
 }
 
 @media only screen and (max-width: 400px) {
@@ -56,7 +56,7 @@
 .question-button:hover{
   //background-color: #ece9e9;
   background-color: white;
-  border: 2px solid rgb(83, 247, 105)!important;
+  border: 2px solid rgb(247, 66, 66)!important;
   box-shadow: 0 0 0px rgba(33,33,33,.2); 
 }
 
