@@ -41,28 +41,26 @@ const queryData = async () =>{
   return (
       <div className="quiz">
         {loading ? "loading..." :
-        
-        questions.map( item => (
-          <>
-          <MathJax math={item.question} />
-          <br></br>
-            <div className="question-buttons">
-            { item.answers.map( answer => (
-             <div className="question-button">
-                <MathJax math={answer.answer} />
-             </div> ////question-answers
-             /*
-              <div className="question-answer">
-                <input type="radio" name={item.id} value={answer.answer}></input>
-                <label>{answer.answer}</label><br></br>
+          questions.map( item => (
+            <>
+            <MathJax math={item.question} />
+            <br></br>
+              <div className="question-buttons">
+              { item.answers.map( answer => (
+              <div className="question-button">
+                  <MathJax math={answer.answer} />
+              </div> ////question-answers
+              /*
+                <div className="question-answer">
+                  <input type="radio" name={item.id} value={answer.answer}></input>
+                  <label>{answer.answer}</label><br></br>
+                </div>
+                */
+              ))
+              }
               </div>
-              */
-            ))
-            }
-            </div>
-          </>
-        ))
-       
+            </>
+          ))
         }
        <button onClick={queryData} value={"ok"}></button>
       </div>
