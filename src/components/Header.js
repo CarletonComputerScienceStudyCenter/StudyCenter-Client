@@ -1,6 +1,6 @@
   
 import React, { useEffect, useState } from 'react';
-import './style/Header.scss';
+import '../style/Header.scss';
 function Header() {
   return (
     <>
