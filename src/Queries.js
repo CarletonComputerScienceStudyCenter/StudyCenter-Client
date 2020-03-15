@@ -5,14 +5,36 @@ export const test = gql`
     id
     question
     hasMathjax
-    correctAnswer{
-      id
-      answer
-    }
     answers{
       id
       answer
     }
   }
 }
+`;
+
+export const QUIZ = gql`
+query quiz($id: ID!){
+    quiz(id: $id) {
+      id
+      title
+      description
+      questions{
+        id
+        body
+        correctAnswer{
+          id
+          answer
+        }
+        answers{
+          id
+          answer
+        }
+      }
+      course{
+          title
+          code
+      }
+    }
+  }
 `;

@@ -1,0 +1,140 @@
+
+.container {
+    width:100%;
+    min-height: 100vh;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main {
+    //padding: 5rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title {
+    margin: 0;
+    line-height: 1.15;
+    font-size: 4rem;
+  }
+
+  .title,
+  .description {
+    text-align: center;
+  }
+
+  .description {
+    line-height: 1.5;
+    font-size: 1.5rem;
+  }
+
+  code {
+    background: #fafafa;
+    border-radius: 5px;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+  .courses-grid{
+      display:flex;
+      justify-content: center;
+      margin-top:1em;
+  }
+
+  @media (max-width: 600px) {
+    .courses-grid {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+
+  .courses-grid-card{
+    padding: 2em;
+    width:20em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin:2em;
+  }
+
+  .courses-grid-card-closed{
+    padding: 2em;
+    width:20em;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin:2em;
+    color:gray;
+  }
+
+  .courses-grid-card-code{
+    font-size: 30px;
+    padding-bottom: 0.3em;
+  }
+  .courses-grid-card-title{
+    font-size: 20px;
+    padding-bottom: 0.5em;
+  }
+
+  .courses-grid-card-description{
+    color:gray;
+    height: 11em;
+  }
+
+  .courses-grid-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .courses-grid-card-button{
+    display:inline-block;
+    padding:0.7em;
+    border:0.11em solid #838181;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform:uppercase;
+    color:#5e5c5c;
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    font-size:14px;
+    text-align:center;
+    transition: all 0.15s;
+    width: 9em;
+    margin:auto;
+    margin-top: 1.5em;
+    width:100%;
+}
+
+.courses-grid-card-button-closed{
+    display:inline-block;
+    padding:0.7em;
+    color:rgb(199, 199, 199);
+    border:0.11em solid #838181;
+    border-color:rgb(199, 199, 199);
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    font-size:14px;
+    text-align:center;
+    transition: all 0.15s;
+    width: 9em;
+    margin:auto;
+    margin-top: 1.5em;
+    width:100%;
+}
+
+ .courses-grid-card-button:hover{
+    color:rgb(199, 199, 199);
+    border-color:rgb(199, 199, 199);
+}
+
+ .courses-grid-card-button:active{
+    color:rgb(199, 199, 199);
+    border-color:rgb(199, 199, 199);
+}
