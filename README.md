@@ -11,5 +11,6 @@ yarn start
 
 ## Screenshots
 <img src="/screenshot2.png"></img>
+<br>
 <img src="/screenshot1.png"></img>
 
