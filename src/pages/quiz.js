@@ -29,7 +29,7 @@ const override = css`
   margin-top:20em;
 `;
 
-//This code junk is to induce a remount, the mathjax component needs a remount to asyncronously typeset each mathml component
+//This code chunk is to induce a remount, the mathjax component needs a remount to concurrently typeset each mathml component
 if(window.location.href.indexOf("arrive") > -1){ 
   window.scrollTo(0,0);
   window.location.href = "/#/quiz";
@@ -127,7 +127,6 @@ const submitQuiz = async () =>{
           color={"gray"}
           loading={loading}
           />
-
         :
         <>
          <QuizContent quiz={quiz} quizAnswers={quizAnswers} setLoading={setLoading} selectAnswer={selectAnswer} submitted={submitted} mark={mark}/>

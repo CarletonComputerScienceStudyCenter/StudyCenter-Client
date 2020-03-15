@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import './style/App.scss';
 import Quiz from './pages/quiz';
 import Home from './pages/home';
-import Header from './Header';
+import Header from './components/Header';
 import Footer from './components/Footer'
 import { HashRouter as Router, Route, Redirect } from "react-router-dom";
 
