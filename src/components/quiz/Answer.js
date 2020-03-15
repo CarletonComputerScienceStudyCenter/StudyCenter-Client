@@ -39,12 +39,6 @@ const Answer = (props) => {
                     "backgroundColor": "#c2ffd2"
                 } 
             }
-            /*if(props.correct){
-                selectedStyle ={
-                    "backgroundColor": "green"
-                } 
-            }
-            */
         }
     }
 

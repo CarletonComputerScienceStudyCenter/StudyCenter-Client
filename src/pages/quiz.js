@@ -8,6 +8,9 @@ import { createHttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import { QUIZ } from '../Queries'
 import QuizContent from '../components/quiz/Quiz'
+import { css } from "@emotion/core";
+import Footer from '../components/Footer'
+import PulseLoader from "react-spinners/PulseLoader";
 
 const Quiz = () => {
 
@@ -17,8 +20,18 @@ let [quizAnswers, setAnswers] = useState();
 let [mark,setMark] = useState(0);
 let [submitted, setSubmitted] = useState(false);
 
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+  margin: auto;
+  height:100vh;
+  margin-top:20em;
+`;
+
 //This code junk is to induce a remount, the mathjax component needs a remount to asyncronously typeset each mathml component
 if(window.location.href.indexOf("arrive") > -1){ 
+  window.scrollTo(0,0);
   window.location.href = "/#/quiz";
   window.location.reload();
 }
@@ -104,8 +117,18 @@ const submitQuiz = async () =>{
 }
 
   return (
-      <div className="quiz">
-        {loading ? "loading..." :
+      <>
+      <div className="quiz-page">
+        
+        {loading ? 
+          <PulseLoader
+          css={override}
+          size={10}
+          color={"gray"}
+          loading={loading}
+          />
+
+        :
         <>
          <QuizContent quiz={quiz} quizAnswers={quizAnswers} setLoading={setLoading} selectAnswer={selectAnswer} submitted={submitted} mark={mark}/>
          <div className="quiz-page-submit-button" onClick={submitQuiz}>Submit</div>
@@ -113,6 +136,8 @@ const submitQuiz = async () =>{
         
         }
       </div>
+      <Footer/>
+      </>
   );
 }
 

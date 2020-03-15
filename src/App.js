@@ -6,6 +6,7 @@ import Home from './pages/home';
 import Header from './Header';
 import Footer from './components/Footer'
 import { HashRouter as Router, Route, Redirect } from "react-router-dom";
+
 function App() {
   let [trigger, setTrigger] = useState(false);
 
@@ -22,17 +23,24 @@ function App() {
     <div className="App">
       <Router>
         <Header/>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+        <HeaderMargin/>
         <Route exact path="/" component={()=><Home trigger={trigger} setTrigger={setTrigger}/>} />
         <Route path="/quiz" component={()=><Quiz trigger={trigger} setTrigger={setTrigger}/>} />
-        <Footer/>
       </Router>
     </div>
   );
 }
 
 export default App;
+
+
+const HeaderMargin = () => {
+  return(
+    <>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    </>
+  );
+}

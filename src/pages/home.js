@@ -1,5 +1,6 @@
 //import PageHead from '../components/PageHead'
 import React from 'react';
+import Footer from '../components/Footer'
 import { Link } from "react-router-dom";
 import '../style/home.scss';
 
@@ -10,7 +11,6 @@ const Home = (props) => {
 
   return(
   <div className="container">
-    
     <main>
       <h1 className="title">
         Computer Science Study Center
@@ -36,6 +36,8 @@ const Home = (props) => {
       </div>
 
     </main>
+    <Footer/>
+    
   </div>
   );
 }

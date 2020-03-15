@@ -1,12 +1,14 @@
 .quiz-page{
-    width:80%;
+    width:90%;
     margin:auto;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     font-size: 16px;
     display:flex;
     flex-direction: column;
     justify-content: center;
+    margin-top:2em;
     margin-bottom:4em;
+    background-color: white;
 }
 
 .quiz-header-score{
