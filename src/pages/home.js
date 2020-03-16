@@ -6,7 +6,8 @@ import '../style/home.scss';
 
 const Home = (props) => {
     const redirect = () => {
-      props.setTrigger(true);
+      window.location.href = process.env.PUBLIC_URL+"/#/quiz?arrive=true";
+      //props.setTrigger(true);
     }
 
   return(

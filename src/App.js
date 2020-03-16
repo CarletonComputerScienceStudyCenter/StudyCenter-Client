@@ -12,9 +12,9 @@ function App() {
 
     useEffect(() => {
       if(trigger){
-        setTrigger(false);
-        window.location.href = process.env.PUBLIC_URL+"/#/quiz?arrive=true";
-        console.log("triggered")
+        //setTrigger(false);
+        //window.location.href = process.env.PUBLIC_URL+"/#/quiz?arrive=true";
+        //console.log("triggered")
       }
 
     },[trigger]);
