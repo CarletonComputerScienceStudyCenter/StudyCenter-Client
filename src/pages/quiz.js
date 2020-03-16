@@ -43,7 +43,7 @@ useEffect(() => {
 })
 
 const httpLink = createHttpLink({
-  uri: 'http://localhost:3030/graphql',
+  uri: 'https://computersciencestudycenter.herokuapp.com/graphql',
   headers: {
       "Content-Type": "application/json",
   }
@@ -94,7 +94,6 @@ const getQuiz = async () =>{
       //shuffle(data.data.quiz.questions[i].answers);
       answers[data.data.quiz.questions[i].id] = null;
   }
-
   //shuffle(data.data.quiz.questions);
 
   setAnswers(answers);
