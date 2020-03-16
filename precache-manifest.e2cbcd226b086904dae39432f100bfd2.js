@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8c371d1e9fd686f2805a7cb4c4255401",
+    "revision": "ac243aa1549a7a0b182672b0e6a933dd",
     "url": "/StudyCenter-Client/index.html"
   },
   {
-    "revision": "138687b72c6195dda6b9",
+    "revision": "c3f2c52689389e829ec7",
     "url": "/StudyCenter-Client/static/css/main.f7ec2fe3.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/StudyCenter-Client/static/js/2.2a5ddefd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "138687b72c6195dda6b9",
-    "url": "/StudyCenter-Client/static/js/main.ae83ef2c.chunk.js"
+    "revision": "c3f2c52689389e829ec7",
+    "url": "/StudyCenter-Client/static/js/main.0ee76e78.chunk.js"
   },
   {
     "revision": "cc318aff02abb84b72e3",

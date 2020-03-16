@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/StudyCenter-Client/static/css/main.f7ec2fe3.chunk.css",
-    "main.js": "/StudyCenter-Client/static/js/main.ae83ef2c.chunk.js",
-    "main.js.map": "/StudyCenter-Client/static/js/main.ae83ef2c.chunk.js.map",
+    "main.js": "/StudyCenter-Client/static/js/main.0ee76e78.chunk.js",
+    "main.js.map": "/StudyCenter-Client/static/js/main.0ee76e78.chunk.js.map",
     "runtime-main.js": "/StudyCenter-Client/static/js/runtime-main.4995ec95.js",
     "runtime-main.js.map": "/StudyCenter-Client/static/js/runtime-main.4995ec95.js.map",
     "static/js/2.2a5ddefd.chunk.js": "/StudyCenter-Client/static/js/2.2a5ddefd.chunk.js",
     "static/js/2.2a5ddefd.chunk.js.map": "/StudyCenter-Client/static/js/2.2a5ddefd.chunk.js.map",
     "index.html": "/StudyCenter-Client/index.html",
-    "precache-manifest.88c45c23eee32a8917a015d0ce1e90ba.js": "/StudyCenter-Client/precache-manifest.88c45c23eee32a8917a015d0ce1e90ba.js",
+    "precache-manifest.e2cbcd226b086904dae39432f100bfd2.js": "/StudyCenter-Client/precache-manifest.e2cbcd226b086904dae39432f100bfd2.js",
     "service-worker.js": "/StudyCenter-Client/service-worker.js",
     "static/css/main.f7ec2fe3.chunk.css.map": "/StudyCenter-Client/static/css/main.f7ec2fe3.chunk.css.map",
     "static/js/2.2a5ddefd.chunk.js.LICENSE.txt": "/StudyCenter-Client/static/js/2.2a5ddefd.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.4995ec95.js",
     "static/js/2.2a5ddefd.chunk.js",
     "static/css/main.f7ec2fe3.chunk.css",
-    "static/js/main.ae83ef2c.chunk.js"
+    "static/js/main.0ee76e78.chunk.js"
   ]
 }
