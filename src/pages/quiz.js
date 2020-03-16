@@ -32,7 +32,7 @@ const override = css`
 //This code chunk is to induce a remount, the mathjax component needs a remount to concurrently typeset each mathml component
 if(window.location.href.indexOf("arrive") > -1){ 
   window.scrollTo(0,0);
-  window.location.href = "/#/quiz";
+  window.location.href = process.env.PUBLIC_URL+"/#/quiz";
   window.location.reload();
 }
 
