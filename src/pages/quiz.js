@@ -91,11 +91,11 @@ const getQuiz = async () =>{
   
   let answers = {};
   for(let i=0;i<data.data.quiz.questions.length;i++){
-      shuffle(data.data.quiz.questions[i].answers);
+      //shuffle(data.data.quiz.questions[i].answers);
       answers[data.data.quiz.questions[i].id] = null;
   }
 
-  shuffle(data.data.quiz.questions);
+  //shuffle(data.data.quiz.questions);
 
   setAnswers(answers);
   setQuiz(data.data.quiz);
