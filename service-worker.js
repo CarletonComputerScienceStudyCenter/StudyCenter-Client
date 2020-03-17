@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/StudyCenter-Client/precache-manifest.453ec4e4450528c181b6328f57e5b9f7.js"
+  "/StudyCenter-Client/precache-manifest.7a61f0fb90aa77ce383ddcd9b96abcb4.js"
 );
 
 self.addEventListener('message', (event) => {
