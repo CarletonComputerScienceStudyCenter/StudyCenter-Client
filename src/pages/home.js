@@ -28,7 +28,7 @@ const Home = (props) => {
           <div className="courses-grid-card-code">COMP 2804</div>
           <div className="courses-grid-card-title">Discrete Structures II</div>
           <div className="courses-grid-card-description">A second course in discrete mathematics and discrete structures. Topics include: counting, sequences and sums, discrete probability, basic statistics, recurrence relations, randomized algorithms. Material is illustrated through examples from computing.</div>
-          <Link to="/course"><div className="courses-grid-card-button">Enter</div></Link>
+          <Link to="/course" onClick={()=>{window.scrollTo(0,0)}}><div className="courses-grid-card-button">Enter</div></Link>
         </div>
       </div>
 

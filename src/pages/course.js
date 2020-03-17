@@ -17,7 +17,7 @@ const course = (props) => {
          <CourseTile tile={"Lectures"} icon={0}/>
           <span onClick={redirect}><CourseTile tile={"Practice"} icon={1}/></span>
           <a href="https://cglab.ca/~morin/teaching/2804/resources/DiscreteStructures.pdf"><CourseTile tile={"Textbook"} icon={2}/></a>
-          <Link to="/"><CourseTile tile={"Back"} icon={3}/></Link>
+          <Link to="/" onClick={()=>{window.scrollTo(0,0)}}><CourseTile tile={"Back"} icon={3}/></Link>
       </div>
     <Footer/>
   </div>
