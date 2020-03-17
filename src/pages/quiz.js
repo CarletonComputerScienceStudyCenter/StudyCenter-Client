@@ -43,7 +43,7 @@ useEffect(() => {
 })
 
 const httpLink = createHttpLink({
-  uri: 'http://localhost:3030/graphql',
+  uri: 'https://computersciencestudycenter.herokuapp.com/graphql',
   headers: {
       "Content-Type": "application/json",
   }
