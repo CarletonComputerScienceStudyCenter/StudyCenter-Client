@@ -19,6 +19,7 @@ let [quiz, setQuiz] = useState();
 let [quizAnswers, setAnswers] = useState();
 let [mark,setMark] = useState(0);
 let [submitted, setSubmitted] = useState(false);
+let [gotQuiz, setGotQuiz] = useState(false);
 
 const override = css`
   display: block;
@@ -37,13 +38,14 @@ if(window.location.href.indexOf("arrive") > -1){
 }
 
 useEffect(() => {
-  if(loading){
+  if(loading && !gotQuiz){
     getQuiz();
+    setGotQuiz(true)
   }
 })
 
 const httpLink = createHttpLink({
-  uri: 'https://computersciencestudycenter.herokuapp.com/graphql',
+  uri: 'http://localhost:3030/graphql',//https://computersciencestudycenter.herokuapp.com/graphql
   headers: {
       "Content-Type": "application/json",
   }
@@ -91,14 +93,18 @@ const getQuiz = async () =>{
   
   let answers = {};
   for(let i=0;i<data.data.quiz.questions.length;i++){
-      //shuffle(data.data.quiz.questions[i].answers);
+      if(data.data.quiz.questions[i].shuffle){
+        shuffle(data.data.quiz.questions[i].answers);
+      }
       answers[data.data.quiz.questions[i].id] = null;
   }
-  //shuffle(data.data.quiz.questions);
+  if(data.data.quiz){
+    shuffle(data.data.quiz.questions);
+  }
 
   setAnswers(answers);
   setQuiz(data.data.quiz);
-  setLoading(false)
+  setLoading(false);
 }
 
 const submitQuiz = async () =>{

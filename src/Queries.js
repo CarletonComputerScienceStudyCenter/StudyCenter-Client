@@ -19,9 +19,11 @@ query quiz($id: ID!){
       id
       title
       description
+      shuffle
       questions{
         id
         body
+        shuffle
         correctAnswer{
           id
           answer
