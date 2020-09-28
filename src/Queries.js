@@ -19,11 +19,10 @@ query quiz($id: ID!){
       id
       title
       description
-      shuffle
       questions{
         id
         body
-        shuffle
+        pseudocode
         correctAnswer{
           id
           answer
@@ -39,4 +38,13 @@ query quiz($id: ID!){
       }
     }
   }
+`;
+
+export const QUIZZES = gql`
+{
+  quizzes{
+    id
+    title
+  }
+}
 `;

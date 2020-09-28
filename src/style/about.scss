@@ -1,0 +1,14 @@
+.about-page{
+    //min-height: 100vh;
+    height: 80vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    flex-direction: column;
+    margin-left:2em;
+    margin-right:2em;
+    a{
+        color:blue
+    }
+}

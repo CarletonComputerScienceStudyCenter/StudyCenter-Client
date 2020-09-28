@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect, useState} from 'react'
 import MathJax from 'react-mathjax-preview'
 import Answer from './Answer'
+import ScriptTag from 'react-script-tag';
 
 const Question = (props) => {
     let [answers,setAnswers] = useState([]);
@@ -50,6 +51,7 @@ const Question = (props) => {
 
     })
     useEffect(() => {
+        console.log(props.question.pseudocode)
         if(props.submitted){
             configureAnswers();
         }
@@ -60,6 +62,9 @@ const Question = (props) => {
     <div className="quiz-question">
         <hr></hr>
         <div className="quiz-question-body"><MathJax math={props.question.body}/></div>
+        { props.question.pseudocode.length > 5 &&
+            <div className="quiz-question-image"><img className="quiz-question-image-image" src={process.env.PUBLIC_URL+"/2804_midterm_pseudocode/"+props.question.pseudocode}></img></div>
+        }
         <div className="quiz-question-answers">
             {answers}
         </div>

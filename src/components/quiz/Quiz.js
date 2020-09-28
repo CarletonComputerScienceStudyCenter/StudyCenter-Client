@@ -2,8 +2,10 @@
 import React from 'react';
 import QuizHeader from './QuizHeader'
 import Question from './Question'
+import ScriptTag from 'react-script-tag';
 
 const Quiz = (props) => (
+    <>
     <div className="quiz">
         <QuizHeader mark={props.mark} setLoading={props.setLoading} submitted={props.submitted} quiz={props.quiz}/>
         {
@@ -14,6 +16,7 @@ const Quiz = (props) => (
             ))
         }
     </div>
+    </>
 )
 
 export default Quiz

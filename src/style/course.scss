@@ -32,6 +32,14 @@
     width:60%;
 }
 
+.quiz-page-tile-grid{
+    min-height:80vh;
+    display:flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+}
+
 
 
 @media (max-width: 600px) {

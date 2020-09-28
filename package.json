@@ -25,6 +25,7 @@
     "react-mathjax": "^1.0.1",
     "react-mathjax-preview": "^0.1.16",
     "react-router-dom": "^5.1.2",
+    "react-script-tag": "^1.1.2",
     "react-scripts": "3.4.0",
     "react-spinners": "^0.8.1"
   },

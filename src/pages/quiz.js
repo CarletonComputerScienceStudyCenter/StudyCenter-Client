@@ -11,8 +11,10 @@ import QuizContent from '../components/quiz/Quiz'
 import { css } from "@emotion/core";
 import Footer from '../components/Footer'
 import PulseLoader from "react-spinners/PulseLoader";
+import ScriptTag from 'react-script-tag';
+import { faHandScissors } from '@fortawesome/free-solid-svg-icons';
 
-const Quiz = () => {
+const Quiz = (props) => {
 
 let [loading, setLoading] = useState(true);
 let [quiz, setQuiz] = useState();
@@ -33,7 +35,9 @@ const override = css`
 //This code chunk is to induce a remount, the mathjax component needs a remount to concurrently typeset each mathml component
 if(window.location.href.indexOf("arrive") > -1){ 
   window.scrollTo(0,0);
-  window.location.href = process.env.PUBLIC_URL+"/#/quiz";
+  let id = window.location.href.slice(window.location.href.indexOf("id=")+3,window.location.href.length)
+ 
+  window.location.href = process.env.PUBLIC_URL+"/#/quiz?id="+id;
   window.location.reload();
 }
 
@@ -80,12 +84,12 @@ const shuffle = (array) =>{
 
 
 const getQuiz = async () =>{
-
+  let id = window.location.href.slice(window.location.href.indexOf("id=")+3,window.location.href.length)
   let data = await client
       .query({
           query: QUIZ,
           variables: {
-              "id": '1'
+              "id": id
             }
       });
   
@@ -93,13 +97,13 @@ const getQuiz = async () =>{
   
   let answers = {};
   for(let i=0;i<data.data.quiz.questions.length;i++){
-      if(data.data.quiz.questions[i].shuffle){
+      /*if(data.data.quiz.questions[i].shuffle){
         shuffle(data.data.quiz.questions[i].answers);
-      }
+      }*/
       answers[data.data.quiz.questions[i].id] = null;
   }
   if(data.data.quiz){
-    shuffle(data.data.quiz.questions);
+    //shuffle(data.data.quiz.questions);
   }
 
   setAnswers(answers);

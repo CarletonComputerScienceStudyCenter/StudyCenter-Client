@@ -14,9 +14,10 @@ const course = (props) => {
   return(
   <div className="course-page">
       <div className="course-page-tile-grid">
-         <CourseTile tile={"Lectures"} icon={0}/>
-          <span onClick={redirect}><CourseTile tile={"Practice"} icon={1}/></span>
+         {/*<CourseTile tile={"Lectures"} icon={0}/>*/}
+          <Link to="/quizzes" onClick={()=>{window.scrollTo(0,0)}}><CourseTile tile={"Quizzes"} icon={1}/></Link>
           <a href="https://cglab.ca/~morin/teaching/2804/resources/DiscreteStructures.pdf"><CourseTile tile={"Textbook"} icon={2}/></a>
+          <Link to="/about" onClick={()=>{window.scrollTo(0,0)}}><CourseTile tile={"About"} icon={4}/></Link>
           <Link to="/" onClick={()=>{window.scrollTo(0,0)}}><CourseTile tile={"Back"} icon={3}/></Link>
       </div>
     <Footer/>
