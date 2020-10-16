@@ -48,3 +48,29 @@ export const QUIZZES = gql`
   }
 }
 `;
+
+export const GENERATEMIDTERM = gql`
+{
+  generateMidterm{
+    title
+    description
+    questions{
+      id
+      body
+      pseudocode
+      correctAnswer{
+        id
+        answer
+      }
+      answers{
+        id
+        answer
+      }
+    }
+    course{
+        title
+        code
+    }
+  }
+}
+`;

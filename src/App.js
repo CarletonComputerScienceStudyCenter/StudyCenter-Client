@@ -5,6 +5,7 @@ import Quiz from './pages/quiz';
 import Quizzes from './pages/quizzes';
 import Home from './pages/home';
 import Course from './pages/course';
+import Midterm from './pages/midterm';
 import About from './pages/about';
 import Header from './components/Header';
 import Footer from './components/Footer'
@@ -22,6 +23,7 @@ function App() {
         <Route path="/quiz" component={()=><Quiz quiz={quiz}/>} />
         <Route path="/quizzes" component={()=><Quizzes setQuiz={setQuiz}/>} />
         <Route path="/course" component={()=><Course/>} />
+        <Route path="/midterm" component={()=><Midterm/>} />
       </Router>
     </div>
   );

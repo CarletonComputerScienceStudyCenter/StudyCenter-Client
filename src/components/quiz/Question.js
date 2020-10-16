@@ -61,7 +61,7 @@ const Question = (props) => {
     return(
     <div className="quiz-question">
         <hr></hr>
-        <div className="quiz-question-body"><MathJax math={props.question.body}/></div>
+        <div className="quiz-question-body"><span style={{"margin-right":"0.50em"}}>{props.questionNum}.</span><MathJax math={props.question.body}/></div>
         { props.question.pseudocode.length > 5 &&
             <div className="quiz-question-image"><img className="quiz-question-image-image" src={process.env.PUBLIC_URL+"/2804_midterm_pseudocode/"+props.question.pseudocode}></img></div>
         }

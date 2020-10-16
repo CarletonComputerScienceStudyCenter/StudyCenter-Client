@@ -2,7 +2,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons' 
-import { faBook, faFilm, faPencilAlt, faUndoAlt, faHome } from '@fortawesome/free-solid-svg-icons'
+import { faBook, faFilm, faPencilAlt, faUndoAlt, faHome, faVial } from '@fortawesome/free-solid-svg-icons'
 import '../../style/course.scss';
 
 const CourseTile = (props) => {
@@ -12,8 +12,9 @@ const CourseTile = (props) => {
     const filmIcon = <FontAwesomeIcon icon={faFilm} />
     const gitIcon = <FontAwesomeIcon icon={faUndoAlt} />
     const homeIcon = <FontAwesomeIcon icon={faHome} />
+    const vialIcon = <FontAwesomeIcon icon={faVial} />
 
-    let icons = [filmIcon,pencilIcon,bookIcon,gitIcon,homeIcon]
+    let icons = [filmIcon,pencilIcon,bookIcon,gitIcon,homeIcon,vialIcon]
 
     return(
         <div className="course-page-tile hvr-float">
